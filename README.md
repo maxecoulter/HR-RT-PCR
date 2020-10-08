@@ -71,7 +71,7 @@ The python script has the following dependencies that will need to be installed 
    
    c) Column 3 (4,5...), the transcriptome product(s) for matching. This is usually just one product, but multiple products can be added, each in a seperate column.
 
-The possible transcriptome products for each primer pair are specified in the output file with the suffix **cluster_results**. *Note that you can only use products identified for that primer pair. If you specify impossible product sizes the program will break*.
+  The possible transcriptome products for each primer pair are specified in the output file with the suffix **cluster_results**. *Note that you can only   use products identified for that primer pair. If you specify impossible product sizes the program will break*.
 
 7. **output** this is the path and outfile prefix to determine name and location of outfiles, specified in line 30 of the bash script.
 
@@ -137,7 +137,7 @@ The possible transcriptome products for each primer pair are specified in the ou
   
     j) Column 10, The total transcriptome product proportion for each clustered transcriptome product in column 4
   
-In the above example, one primer set (23) with two samples (inf2_6 and nod_4) is shown. There are five RT-PCR products (column 3); 328, 415, 242, 376 and 447 with corresponding tramscriptome product matches (column 4). Some transcriptome products such as 327 are found in just one transcript, whilst others (242, 375) are from multiple transcripts. To calculate transcriptome product proportions, the tpm values (column 8) are added together per transcriptome product and per product proportions are calculated (for a more detailed explanation of the analysis see https://github.com/PauloFlores/RNA-Seq-validation/blob/master/README.md and https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-019-6243-7). These *in silico* transcript proportions can then be compared to the proportions calculated from the RT-PCR results.
+  In the above example, one primer set (23) with two samples (inf2_6 and nod_4) is shown. There are five RT-PCR products (column 3); 328, 415, 242, 376 and 447 with corresponding tramscriptome product matches (column 4). Some transcriptome products such as 327 are found in just one transcript, whilst others (242, 375) are from multiple transcripts. To calculate transcriptome product proportions, the tpm values (column 8) are added together per transcriptome product and per product proportions are calculated (for a more detailed explanation of the analysis see https://github.com/PauloFlores/RNA-Seq-validation/blob/master/README.md and https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-019-6243-7). These *in silico* transcript proportions can then be compared to the proportions calculated from the RT-PCR results.
 
 6. **\<output prefix>\_RT_PCRcluster_results** Results of RT-PCR and transcriptome product matching algorithm. Output format is shown for **manual** input above. As previously explained, this output can be edited with wrong matches removed and used as the **manual** input.
 
