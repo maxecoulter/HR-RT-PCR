@@ -19,6 +19,6 @@ The bash script provided runs BLASTn to identify possible matches for the list o
 
 ### Input files:
 
-1. **Transcriptome.fasta** this is the transcriptome you used for running Salmon. This is specified in line of the bash script
+1. **TranscriptomeFileName** this is the transcriptome you used for running Salmon. This is specified in line 19 of the bash script
 1. 
 
