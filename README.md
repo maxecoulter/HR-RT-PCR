@@ -117,25 +117,25 @@ The possible transcriptome products for each primer pair are specified in the ou
                 23	nod_4	376	375	375	perfect,perfect	BART1_0-p39718.005	0.0	0.0	0.07113959406734216
                 23	nod_4	447	446	446	perfect,perfect	BART1_0-p39718.014	0.0	0.0	0.0
                
-  a) Column 1, Primer name without F or R termination;
+    a) Column 1, Primer name without F or R termination;
   
-  b) Column 2, Sample name;
+    b) Column 2, Sample name;
   
-  c) Column 3, RT-PCR product size;
+    c) Column 3, RT-PCR product size;
   
-  d) Column 4, the matched clustered trancsriptome product;
+    d) Column 4, the matched clustered trancsriptome product;
   
-  e) Column 5, The size of the product from the transcript (will be the same as column 4);
+    e) Column 5, The size of the product from the transcript (will be the same as column 4);
   
-  f) Column 6, The BLAST match information (currently only perfect,perfect matches are used);
+    f) Column 6, The BLAST match information (currently only perfect,perfect matches are used);
   
-  g) Column 7, The transcript that primers match to;
+    g) Column 7, The transcript that primers match to;
   
-  h) Column 8, TPM of transcript in that sample;
+    h) Column 8, TPM of transcript in that sample;
   
-  i) Column 9, The RT-PCR product proportion (for each RT-PCR product in column 3);
+    i) Column 9, The RT-PCR product proportion (for each RT-PCR product in column 3);
   
-  j) Column 10, The total transcriptome product proportion for each clustered transcriptome product in column 4
+    j) Column 10, The total transcriptome product proportion for each clustered transcriptome product in column 4
   
 In the above example, one primer set (23) with two samples (inf2_6 and nod_4) is shown. There are five RT-PCR products (column 3); 328, 415, 242, 376 and 447 with corresponding tramscriptome product matches (column 4). Some transcriptome products such as 327 are found in just one transcript, whilst others (242, 375) are from multiple transcripts. To calculate transcriptome product proportions, the tpm values (column 8) are added together per transcriptome product and per product proportions are calculated (for a more detailed explanation of the analysis see https://github.com/PauloFlores/RNA-Seq-validation/blob/master/README.md and https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-019-6243-7). These *in silico* transcript proportions can then be compared to the proportions calculated from the RT-PCR results.
 
