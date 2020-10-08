@@ -50,11 +50,11 @@ The python script has the following dependencies that will need to be installed 
                 54	110	0.241	0.419	0.452	0.440	0.501	0.238
                 54	332	0.758	0.580	0.547	0.559	0.498	0.761
              
-  a) Column 1, primer name without F or R termination;
+    a) Column 1, primer name without F or R termination;
   
-  b) Column 2, product size;
+    b) Column 2, product size;
   
-  c) Columns 3,4... Individual per sample proportions for each product size
+    c) Columns 3,4... Individual per sample proportions for each product size
 
 
 6. **manual** this is an optional file for specifying RT-PCR-transcriptome product matches, specified in line 28 of bash script. The file with the correct format is produced automatically when the script is first run and has the suffix (**RT_PCRcluster_results**) This should be checked after the first run to see if matches are correct. If adjustments are required, this file should be adjusted and used as the **manual** input. The file is in this format:
