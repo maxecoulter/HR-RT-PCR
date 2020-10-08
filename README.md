@@ -25,11 +25,11 @@ The bash script provided (**BaRT_2_RT_PCR_analysis.sh**) runs BLASTn to identify
 1. **BlastN_Output** this is the location and name of the BLAST output you need to specify in line 17 of the bash script
 1. **TranscriptomeFileName** this is the transcriptome you used for running Salmon. This is specified in line 19 of the bash script
 1. **PrimersFileName** the name and path to the primers used in RT-PCR analysis, specified in line of the bash script. Primer names must end with F or R (for forward and reverse) e.g:
-    
-    >53F \
-    GCAGTTAATCTCCTCTGG \
-    >53R \
-    GGCGTAGGTGGACGCGGTGAGG \
+
+        >53F \
+        GCAGTTAATCTCCTCTGG \
+        >53R \
+        GGCGTAGGTGGACGCGGTGAGG
     
 
 1.
