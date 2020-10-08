@@ -7,8 +7,8 @@ Contact: mecoulter@dundee.ac.uk
 An updated and expanded version of the script described here (https://github.com/PauloFlores/RNA-Seq-validation) with the main matching and analysis in a python script.
 This script uses a similar method to that described in the link, but with some changes:
 
-* The python script carries out correlation analysis and produces figures as well as providing matches
-* Matching RT-PCR products to transriptome products is a non-trivial problem in some cases. Therefore the algorithm for matching products together has been improved, by considering all possible combinations of matches with a specified window size and choosing the best match. When considering which is the "best" match, first the combination that has the greatest number of matches is considered, and if there are still multiple possibilities the closest match is used. Even then, other complex considerations from the raw RT-PCR data may need to be taken into account with matches added/removed. There is therefore an option to edit the product matches manually
+* The python script carries out correlation analysis and produces figures as well as providing transcriptome product matches for RT-PCR products
+* Matching RT-PCR products to transcriptome products is a non-trivial problem in some cases. Therefore the algorithm for matching products together has been improved, by considering all possible combinations of matches with a specified window size and choosing the best match. When considering which is the "best" match, first the combination that has the greatest number of matches is considered, and if there are still multiple possibilities the closest match is used. Even then, other complex considerations from the raw RT-PCR data may need to be taken into account with matches added/removed. There is therefore an option to edit the product matches manually
 
 * The script produces a correlation plot and spearman and pearson correlations as output, as well as RT-PCR:transcriptome product matches (if not using manual mode), transcriptome products identified for each primer set, and correlations for each individual primer set for troubleshooting
 
