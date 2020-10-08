@@ -41,9 +41,9 @@ The bash script provided (**BaRT_2_RT_PCR_analysis.sh**) runs BLASTn to identify
                 54	110	0.241	0.419	0.452	0.440	0.501	0.238
                 54	332	0.758	0.580	0.547	0.559	0.498	0.761
              
-        a) Column 1, primer name without F or R termination;
-        b) Column 2, product size;
-        c) Columns 3,4... Individual per sample proportions for each product size
+  a) Column 1, primer name without F or R termination;
+  b) Column 2, product size;
+  c) Columns 3,4... Individual per sample proportions for each product size
 
 6. **manual** this is an optional file for specifying RT-PCR-transcriptome product matches, specified in line 28 of bash script. The file with the correct format is produced automatically when the script is first run output file name has the suffix (**RT_PCRcluster_results**) This should be checked after the first run to see if matches are correct. If adjustments are required, this file should be adjusted. The file is in this format:
 
@@ -53,13 +53,24 @@ The bash script provided (**BaRT_2_RT_PCR_analysis.sh**) runs BLASTn to identify
                 23	376	375
                 23	447	449
                 28	419	421
- a) Column 1, primer name without F or R termination;
- b) Column 2, the RT PCR product for matching to the transcriptome product(s);
- c) Column 3 (4,5...), the transcriptome product(s) for matching. This is usually just one product, but multiple products can be added, each in a seperate column.
+   a) Column 1, primer name without F or R termination;
+   b) Column 2, the RT PCR product for matching to the transcriptome product(s);
+   c) Column 3 (4,5...), the transcriptome product(s) for matching. This is usually just one product, but multiple products can be added, each in a seperate column.
 
 The possible transcriptome products for each primer pair are specified in the output file with the suffix **cluster_results**. *Note that you can only use products identified for that primer pair. If you specify impossible product sizes the program will break*.
 
 7. **output** this is the path and outfile prefix to determine name and location of outfiles, specified in line 30 of the bash script.
 
+
+### Output files:
+
+1. **primers_complete_match.txt** A list of all the primers that had product matches used in the correlation analysis
+2. **\\<output_>cluster_results\\** A file with information on each transcriptome product identified for each primer set. The file is in the following format:
+
+                151	93	[[93, 'G30361;G30361.6(-)', ('perfect', 'perfect')], [93, 'G30361;G30361.9(-)', ('perfect', 'perfect')], [93, 'G30361;G30361.1(-)', ('perfect', 'perfect')], [93, 'G30361;G30361.5(-)', ('perfect', 'perfect')], [93, 'G30361;G30361.7(-)', ('perfect', 'perfect')]]
+                151	96	[[96, 'G30361;G30361.3(-)', ('perfect', 'perfect')], [96, 'G30361;G30361.4(-)', ('perfect', 'perfect')]]
+                151	122	[[122, 'G30361;G30361.2(-)', ('perfect', 'perfect')], [122, 'G30361;G30361.8(-)', ('perfect', 'perfect')]]
+                75	215	[[215, 'G21499;G21499.4(-)', ('perfect', 'perfect')], [215, 'G21499;G21499.10(-)', ('perfect', 'perfect')], [215, 'G21499;G21499.6(-)', ('perfect', 'perfect')], [215, 'G21499;G21499.14(-)', ('perfect', 'perfect')], [215, 'G21499;G21499.1(-)', ('perfect', 'perfect')], [215, 'G21499;G21499.12(-)', ('perfect', 'perfect')], [215, 'G21499;G21499.7(-)', ('perfect', 'perfect')], [215, 'G21499;G21499.11(-)', ('perfect', 'perfect')], [215, 'G21499;G21499.5(-)', ('perfect', 'perfect')], [215, 'G21499;G21499.8(-)', ('perfect', 'perfect')]]
+                75	220	[[220, 'G21499;G21499.9(-)', ('perfect', 'perfect')], [220, 'G21499;G21499.3(-)', ('perfect', 'perfect')], [220, 'G21499;G21499.13(-)', ('perfect', 'perfect')], [220, 'G21499;G21499.2(-)', ('perfect', 'perfect')]]
 
 
