@@ -65,7 +65,7 @@ The possible transcriptome products for each primer pair are specified in the ou
 ### Output files:
 
 1. **primers_complete_match.txt** A list of all the primers that had product matches used in the correlation analysis
-2. **\\<output_>cluster_results\\** A file with information on each transcriptome product identified for each primer set. The file is in the following format:
+2. **<output prefix>_cluster_results** A file with information on each transcriptome product identified for each primer set. The file is in the following format:
 
                 151	93	[[93, 'G30361;G30361.6(-)', ('perfect', 'perfect')], [93, 'G30361;G30361.9(-)', ('perfect', 'perfect')], [93, 'G30361;G30361.1(-)', ('perfect', 'perfect')], [93, 'G30361;G30361.5(-)', ('perfect', 'perfect')], [93, 'G30361;G30361.7(-)', ('perfect', 'perfect')]]
                 151	96	[[96, 'G30361;G30361.3(-)', ('perfect', 'perfect')], [96, 'G30361;G30361.4(-)', ('perfect', 'perfect')]]
