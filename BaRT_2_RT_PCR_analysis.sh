@@ -24,7 +24,11 @@ PathToSamplesFolder="/path/to/salmon_quants/"
 
 rtPCRInput="/path/to/rtPCR_productsAndProportions.txt"  ## ## Header: "Primer 	Size	INF2	LEAF	EMBRYO	INF1	NODE"
 
+
+manual="/path/to/RT_PCRcluster_results.txt" #Manually edit the product match file, optional
+
 output="/path/to/output_prefix" #Output prefix
+
 
 
 conda activate blast
