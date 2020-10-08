@@ -143,9 +143,21 @@ The python script has the following dependencies that will need to be installed 
 
 7. **\<output prefix>\.png** A scatterplot to compare RT-PCR product proportions with transcriptome proportions. Not all data points are shown, the smallest product is not shown in the plot.. So if a primer set amplifies two products, only the largest will be shown. This is because, particularly when there are only two products, the product proportions are mirror images of each other.
 
+### Inputs for python script
 
+The python script has the following flags for inputs required:
   
+  -b **BlastN_Output**, the output file from BLAST
   
+  -p **rtPCRInput**, the RT-PCR proportions file
+  
+  -s **PathToSamplesFolder**, the salmon input folder
+  
+  -w **Match window size**, this is the wondow size that the RT-PCR/transcript product matching algorithm uses. For BaRTv2.0 it was set to 6.
+  
+  -o $output, The output path and prefix
  
+ 
+
 
 
