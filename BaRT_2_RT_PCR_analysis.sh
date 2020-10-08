@@ -53,7 +53,7 @@ rm Transcriptome_DB.n*
 conda activate ggplot_python
 echo "Now analysing data..."
 
-python BaRT_RT_PCR_analysis.py -b $BlastN_Output -p $rtPCRInput -s $PathToSamplesFolder -w 6 -cw 0 -o $output
+python BaRT_RT_PCR_analysis.py -b $BlastN_Output -p $rtPCRInput -s $PathToSamplesFolder -w 6 -o $output
 
 conda deactivate
 
