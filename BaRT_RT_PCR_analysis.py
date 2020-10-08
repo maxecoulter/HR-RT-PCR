@@ -707,7 +707,7 @@ def main():
 	parser.add_argument('-b', dest = 'BLAST_input', type = str, help = 'BLASTn input')
 	parser.add_argument('-p', dest = 'RT_PCR_input', type = str, help = 'RT_PCR input file')
 	parser.add_argument('-s', dest = 'salmon_quants_folder',type = str, help = 'salmon quants folder path')
-	parser.add_argument('-w', dest = 'window',type = int, help = 'Size of window for combining predicted and actual PCR products')
+	parser.add_argument('-w', dest = 'window',type = int, help = 'Size of window for combining predicted and actual PCR products', default = 6)
 	parser.add_argument('-cw', dest = 'cwindow',type = int, help = 'Size of window for clustering similar predicted primer products', default = 0)
 	parser.add_argument('-o', dest = 'scatterplot_output',type = str, help = 'Name of scatterplot output file')
 	parser.add_argument('-reps', dest = 'reps',type = bool, help = 'Are there salmon quant reps, True or False?',default = False)
