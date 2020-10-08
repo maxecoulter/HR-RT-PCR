@@ -87,11 +87,11 @@ The possible transcriptome products for each primer pair are specified in the ou
                 75	215	[[215, 'G21499;G21499.4(-)', ('perfect', 'perfect')], [215, 'G21499;G21499.10(-)', ('perfect', 'perfect')], [215, 'G21499;G21499.6(-)', ('perfect', 'perfect')], [215, 'G21499;G21499.14(-)', ('perfect', 'perfect')], [215, 'G21499;G21499.1(-)', ('perfect', 'perfect')], [215, 'G21499;G21499.12(-)', ('perfect', 'perfect')], [215, 'G21499;G21499.7(-)', ('perfect', 'perfect')], [215, 'G21499;G21499.11(-)', ('perfect', 'perfect')], [215, 'G21499;G21499.5(-)', ('perfect', 'perfect')], [215, 'G21499;G21499.8(-)', ('perfect', 'perfect')]]
                 75	220	[[220, 'G21499;G21499.9(-)', ('perfect', 'perfect')], [220, 'G21499;G21499.3(-)', ('perfect', 'perfect')], [220, 'G21499;G21499.13(-)', ('perfect', 'perfect')], [220, 'G21499;G21499.2(-)', ('perfect', 'perfect')]]
            
- a) Column 1, Primer name without F or R termination;
+   a) Column 1, Primer name without F or R termination;
  
- b) Column 2, size of transcriptome product identified with primers;
+   b) Column 2, size of transcriptome product identified with primers;
  
- c) Columns 3 information on transcripts that the product is found in. This consists of comma seperated lists in square brackets, with information on individual product sizes (these will be the same as in column 2), the transcript where that product comes from and the type of match (with current version only primers with perfect BLAST matches are considered). FOr editing the **RT_PCRcluster_results** file for the **manual** input, only column 1 and column 2 are relavent.
+   c) Columns 3 information on transcripts that the product is found in. This consists of comma seperated lists in square brackets, with information on individual product sizes (these will be the same as in column 2), the transcript where that product comes from and the type of match (with current version only primers with perfect BLAST matches are considered). FOr editing the **RT_PCRcluster_results** file for the **manual** input, only column 1 and column 2 are relavent.
 
 3. **\<output prefix>\_individual_primer_results** A file with per primer correlation information. Includes information on number of product matches, data points, correlations and p values
 
