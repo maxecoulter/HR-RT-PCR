@@ -45,6 +45,7 @@ The bash script provided (**BaRT_2_RT_PCR_analysis.sh**) runs BLASTn to identify
   b) Column 2, product size;
   c) Columns 3,4... Individual per sample proportions for each product size
 
+
 6. **manual** this is an optional file for specifying RT-PCR-transcriptome product matches, specified in line 28 of bash script. The file with the correct format is produced automatically when the script is first run output file name has the suffix (**RT_PCRcluster_results**) This should be checked after the first run to see if matches are correct. If adjustments are required, this file should be adjusted. The file is in this format:
 
                 Primer	RT PCR product	Matched transcriptome products
