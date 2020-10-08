@@ -35,9 +35,29 @@ The bash script provided (**BaRT_2_RT_PCR_analysis.sh**) runs BLASTn to identify
 1.**PathToSamplesFolder** this is the path to folder with salmon quantifications in it, specified in line 23 of bash script. Quantifications for each sample should be in folders in this directory, make sure the sample names for each folder match with the sample names given in RT-PCR input file.
 1.**rtPCRInput** this is the path and input file with RT PCR product proportions, specified in line 25 of the bash script. The tsv file should be in the following format:
 
-                Primer	Size	sample1	sample2	sample3	sample4	sample5	sample6	sample7	sample8	sample9	sample10	sample11	sample12
-                53	130		0.245169601	0.149009806	0.162643258	0.224078159		0.172184007	0.179695698	0.188429752	0.184210526	0.142186166	0.12686687
-                53	223		0.754830399	0.850990194	0.837356742	0.775921841		0.827815993	0.820304302	0.811570248	0.815789474	0.857813834	0.87313313
-                54	110	0.241532767	0.41989802	0.452108593	0.440929428	0.501279834	0.23851939	0.464493683	0.493283391	0.301314199	0.503980049	0.390434631	0.553052
-                54	332	0.758467233	0.58010198	0.547891407	0.559070572	0.498720166	0.76148061	0.535506317	0.506716609	0.698685801	0.496019951	0.609565369	0.446948
+                Primer	Size	sample1	sample2	sample3	sample4	sample5	sample6
+                53	130	0.240	0.149	0.163	0.224	0.172	0.179	
+                53	223	0.754	0.850	0.837	0.775	0.827	0.820
+                54	110	0.241	0.419	0.452	0.440	0.501	0.238
+                54	332	0.758	0.580	0.547	0.559	0.498	0.761
+             
+a) Column 1, primer name without F or R termination;
+b) Column 2, product size;
+c) Columns 3,4... Individual per sample proportions for each product size
+
+1.**manual** this is an optional file for specifying RT-PCR-transcriptome product matches. The file with the correct format is produced automatically when the script is first run output file name has the suffix (**RT_PCRcluster_results**) This should be checked after the first run to see if matches are correct. If adjustments are required, this file should be adjusted. The file is in this format:
+
+                Primer	RT PCR product	Matched transcriptome products
+                14      161	160
+                14	502	502
+                23	376	375
+                23	447	449
+                28	419	421
+a) Column 1, primer name without F or R termination;
+b) Column 2, the RT PCR product for matching to the transcriptome product(s);
+c) Column 3 (4,5...), the transcriptome product(s) for matching. This is usually just one product, but multiple products can be added, each in a seperate column.
+
+The possible transcriptome products for each primer pair are specified in the output file with the suffix **cluster_results**. *Note that you can only use products identified for that primer pair. If you specify impossible product sizes the program will break*.
+
+
 
