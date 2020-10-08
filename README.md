@@ -19,6 +19,7 @@ The bash script provided runs BLASTn to identify possible matches for the list o
 
 ### Input files:
 
+1. **BlastN_Output** this is the location and name of the BLAST output you need to specify in line 17 of the bash script
 1. **TranscriptomeFileName** this is the transcriptome you used for running Salmon. This is specified in line 19 of the bash script
 1. 
 
