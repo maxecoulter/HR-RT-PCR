@@ -1,20 +1,20 @@
 
-#Script to predict likely PCR product sizes and match to RT-PCR data
+"""Script to predict likely PCR product sizes and match to RT-PCR data
 
-#Rules:
-#Products >600bp and < 90bp are a bit dodge, these will not be counted
-#Primers will amplify where they match best. The hit does not necessarily need to be 100% however - if a primer has a different base at its proximal end, it will bind fine (even if two bases). Primers will bind if a match is missing in the middle, but not as well, so if there is a better binding site, this will dominate.
-#ACGTC
-#|||||
-#ACGTC
-#TGCAG
-#First work out whether primer is a good hit according to the citeria above. If it is, store the information for that primer in 
-#Furthermore, once likely products from different transcripts are generated, these need to be clustered. As with Paulo's script, products will be clustered if they are within a window of +/- 6, and will be counted as the corresponding RT-PCR product using the same criteria.
-#Also possible 2 products may be amplified from same transcript, these will ahve to be flagged
+Rules:
+Products >600bp and < 90bp are a bit dodge, these will not be counted
+Primers will amplify where they match best. The hit does not necessarily need to be 100% however - if a primer has a different base at its proximal end, it will bind fine (even if two bases). Primers will bind if a match is missing in the middle, but not as well, so if there is a better binding site, this will dominate.
+ACGTC
+|||||
+ACGTC
+TGCAG
+First work out whether primer is a good hit according to the citeria above. If it is, store the information for that primer in 
+Furthermore, once likely products from different transcripts are generated, these need to be clustered. As with Paulo's script, products will be clustered if they are within a window of +/- 6, and will be counted as the corresponding RT-PCR product using the same criteria.
+Also possible 2 products may be amplified from same transcript, these will ahve to be flagged
 
-#See below for BLAST output format
-#"6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen salltitles qcovs qcovhsp"
-#53F	G3395;G3395.23(-)	100.000	18	0	0	1	18	421	438	0.010	36.2	18	3092	G3395;G3395.23(-)	100	100
+See below for BLAST output format
+"6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen salltitles qcovs qcovhsp"
+53F	G3395;G3395.23(-)	100.000	18	0	0	1	18	421	438	0.010	36.2	18	3092	G3395;G3395.23(-)	100	100"""
 #Parse BLAST output
 import sys
 import os
@@ -30,15 +30,6 @@ import itertools
 
 tpm_threshold = 0 #minimum total tpm for primer-sample to be included in analysis
 
-#window = 4
-
-#BLAST_input = "/mnt/shared/scratch/mc42302/201903_RTD2/Benchmarking/RT_PCR/Primers_vs_AllTranscripts.txt"
-
-#RT_PCR_input = "/mnt/shared/scratch/mc42302/201903_RTD2/Benchmarking/RT_PCR/rtPCR_productsAndProportions.txt"
-
-#salmon_quants_folder = "/mnt/shared/scratch/mc42302/201903_RTD2/Pacbio_20_samples/salmon_quants/quants/"
-
-#scatterplot_output = "/mnt/shared/scratch/mc42302/201903_RTD2/Benchmarking/RT_PCR/BaRT_2_Iso1_correlation_complete_matches_spuriousRT_PCR_removed"
 
 class Parse_BLAST:
 	def __init__(self,line):
@@ -717,7 +708,7 @@ def main():
 	parser.add_argument('-p', dest = 'RT_PCR_input', type = str, help = 'RT_PCR input file')
 	parser.add_argument('-s', dest = 'salmon_quants_folder',type = str, help = 'salmon quants folder path')
 	parser.add_argument('-w', dest = 'window',type = int, help = 'Size of window for combining predicted and actual PCR products')
-	parser.add_argument('-cw', dest = 'cwindow',type = int, help = 'Size of window for clustering similar predicted primer products')
+	parser.add_argument('-cw', dest = 'cwindow',type = int, help = 'Size of window for clustering similar predicted primer products', default = 0)
 	parser.add_argument('-o', dest = 'scatterplot_output',type = str, help = 'Name of scatterplot output file')
 	parser.add_argument('-reps', dest = 'reps',type = bool, help = 'Are there salmon quant reps, True or False?',default = False)
 	parser.add_argument('-rep_info', dest = 'rep_info',type = int, help = 'Length of rep suffix. E.g <sample_name>_a,<sample_name>_b')
