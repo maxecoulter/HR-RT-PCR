@@ -41,9 +41,9 @@ The bash script provided (**BaRT_2_RT_PCR_analysis.sh**) runs BLASTn to identify
                 54	110	0.241	0.419	0.452	0.440	0.501	0.238
                 54	332	0.758	0.580	0.547	0.559	0.498	0.761
              
-a) Column 1, primer name without F or R termination;
-b) Column 2, product size;
-c) Columns 3,4... Individual per sample proportions for each product size
+ a) Column 1, primer name without F or R termination;
+ b) Column 2, product size;
+ c) Columns 3,4... Individual per sample proportions for each product size
 
 6. **manual** this is an optional file for specifying RT-PCR-transcriptome product matches, specified in line 28 of bash script. The file with the correct format is produced automatically when the script is first run output file name has the suffix (**RT_PCRcluster_results**) This should be checked after the first run to see if matches are correct. If adjustments are required, this file should be adjusted. The file is in this format:
 
@@ -53,9 +53,9 @@ c) Columns 3,4... Individual per sample proportions for each product size
                 23	376	375
                 23	447	449
                 28	419	421
-a) Column 1, primer name without F or R termination;
-b) Column 2, the RT PCR product for matching to the transcriptome product(s);
-c) Column 3 (4,5...), the transcriptome product(s) for matching. This is usually just one product, but multiple products can be added, each in a seperate column.
+ a) Column 1, primer name without F or R termination;
+ b) Column 2, the RT PCR product for matching to the transcriptome product(s);
+ c) Column 3 (4,5...), the transcriptome product(s) for matching. This is usually just one product, but multiple products can be added, each in a seperate column.
 
 The possible transcriptome products for each primer pair are specified in the output file with the suffix **cluster_results**. *Note that you can only use products identified for that primer pair. If you specify impossible product sizes the program will break*.
 
