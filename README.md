@@ -1,6 +1,7 @@
 # HR-RT-PCR
 
 Author: Max Coulter 2020
+
 Contact: mecoulter@dundee.ac.uk
 
 An updated and expanded version of the script described here (https://github.com/PauloFlores/RNA-Seq-validation) with the main matching and analysis in a python script.
