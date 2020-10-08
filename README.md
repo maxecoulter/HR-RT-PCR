@@ -51,7 +51,9 @@ The python script has the following dependencies that will need to be installed 
                 54	332	0.758	0.580	0.547	0.559	0.498	0.761
              
   a) Column 1, primer name without F or R termination;
+  
   b) Column 2, product size;
+  
   c) Columns 3,4... Individual per sample proportions for each product size
 
 
