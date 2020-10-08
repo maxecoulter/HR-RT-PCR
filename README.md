@@ -20,6 +20,15 @@ You need to run salmon for transcript quantification on your samples with your c
 
 The bash script provided (**BaRT_2_RT_PCR_analysis.sh**) runs BLASTn to identify possible matches for the list of primers provided. Once BLAST is complete the python script (**BaRT_RT_PCR_analysis.py**) will run and analyse the results from BLAST, Salmon and RT-PCR results. All input files with paths should be adjusted as required within the bash script.
 
+The python script has the following dependencies that will need to be installed before use:
+
+* plotnine
+* pandas
+* numpy
+* scipy
+
+
+
 ### Input variables to be set:
 
 1. **BlastN_Output** this is the location and name of the BLAST output you need to specify in line 17 of the bash script
