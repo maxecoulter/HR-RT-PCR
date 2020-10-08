@@ -15,5 +15,10 @@ This script uses a similar method to that described in the link, but with some c
 
 You need to run salmon for transcript quantification on your samples with your chosen reference transcriptome. You also need to have BLAST version 2.5.0+ installed. 
 
+The bash script provided runs BLASTn to identify possible matches for the list of primers provided. Once BLAST is complete the python script will run and analyse the results from BLAST, Salmon and RT-PCR results. All input files with paths should be adjusted as required within the bash script.
+
 ### Input files:
+
+1. **Transcriptome.fasta** this is the transcriptome you used for running Salmon. This is specified in line of the bash script
+1. 
 
