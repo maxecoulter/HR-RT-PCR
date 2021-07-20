@@ -156,6 +156,8 @@ The python script has the following flags for inputs required:
   -w **Match window size**, this is the wondow size that the RT-PCR/transcript product matching algorithm uses. For BaRTv2.0 it was set to 6.
   
   -o $output, The output path and prefix
+  
+  -m **Manual product matches file** An optional parameter to use manual matches. The program will match up RT-PCR and transcriptome products automatically. However, you may want to adjust these matches to take into account considerations not considered by the algorithm, or to remove wrong/spurious matches. To do this, adjust the output file **\<output prefix>\_RT_PCRcluster_results** once you have run the program and use this as the input, e.g `-m \<output prefix>\_RT_PCRcluster_results_manuallyadjusted`
  
  
 
